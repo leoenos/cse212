@@ -9,10 +9,10 @@ public static class Arrays
     public static double[] MultiplesOf(double number, int length)
     {
         // The function should create and return an array of multiples of a number
-        double[] multiples = new double[length]; // Instaniates an array of doubles of the needed length
+        double[] multiples = new double[length]; // Instaniates an array of doubles of the requiredlength
         for (int i = 0; i < length; i++) // Loops through every index in the array and calculates the multiple
         {
-            multiples[i] = number * (i + 1);
+            multiples[i] = number * (i + 1); // Calculation. Multiplies starting number by the position and adds 1 to the position
         }
         return multiples;
     }
