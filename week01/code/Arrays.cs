@@ -26,9 +26,13 @@ public static class Arrays
     /// </summary>
     public static void RotateListRight(List<int> data, int amount)
     {
-            // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        int length = data.Count; // Gets list length to use in calculations
+    
+        // Extracts the last amount items from the list from idex position (length - amount)
+        var lastElements = data.GetRange(length - amount, amount);
+        // Removes the last amount items from the list
+        data.RemoveRange(length - amount, amount);
+        // Insert the extracted elements at the beginning
+        data.InsertRange(0, lastElements);
     }
 }
