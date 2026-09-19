@@ -66,6 +66,8 @@ public class PriorityQueueTests
     {
         var priorityQueue = new PriorityQueue();
 
-        Assert.ThrowsException<InvalidOperationException>(() => priorityQueue.Dequeue());
+        var exception = Assert.ThrowsException<InvalidOperationException>(() => priorityQueue.Dequeue());
+
+        Assert.AreEqual("The queue is empty.", exception.Message);
     }
 }
