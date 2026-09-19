@@ -8,7 +8,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Three items are added to the queue with different priorities. Highest priority valued item gets dequued.
     // Expected Result: The item with the highest priority is dequeued first.
-    // Defect(s) Found: 
+    // Defect(s) Found: None 
     public void TestPriorityQueue_1()
     {
         var priorityQueue = new PriorityQueue();
@@ -41,13 +41,20 @@ public class PriorityQueueTests
 
     // Add more test cases as needed below.
 
-    //[TestMethod]
+    [TestMethod]
     // Scenario: Multiple items with different priorities in queue are dequeued in priority order.
-    // Expected Result: Items dequeued in order of priority (high to low).
+    // Expected Result: All items dequeued in order of priority (high to low).
     // Defect(s) Found: 
-    //public void TestPriorityQueue_3()
-    //{
-        //var priorityQueue = new PriorityQueue();
+    public void TestPriorityQueue_3()
+    {
+        var priorityQueue = new PriorityQueue();
     
-    //}
+        priorityQueue.Enqueue("Item1", 3);
+        priorityQueue.Enqueue("Item2", 5);
+        priorityQueue.Enqueue("Item3", 1);
+
+        Assert.AreEqual("Item2", priorityQueue.Dequeue());
+        Assert.AreEqual("Item1", priorityQueue.Dequeue());
+        Assert.AreEqual("Item3", priorityQueue.Dequeue());
+    }
 }
