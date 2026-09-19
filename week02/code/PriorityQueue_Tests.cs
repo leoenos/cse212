@@ -25,7 +25,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Multiple items with the same priority are added to the queue.
     // Expected Result: The first item added with that priority should be dequeued first.
-    // Defect(s) Found: 
+    // Defect(s) Found: None
     public void TestPriorityQueue_2()
     {
         var priorityQueue = new PriorityQueue();
@@ -44,7 +44,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Multiple items with different priorities in queue are dequeued in priority order.
     // Expected Result: All items dequeued in order of priority (high to low).
-    // Defect(s) Found: Highest priority item was not removed after being returned. Implemented proper dequeuing.
+    // Defect(s) Found: Highest priority item was not removed after being returned. Implemented proper dequeuing/removal.
     public void TestPriorityQueue_3()
     {
         var priorityQueue = new PriorityQueue();
