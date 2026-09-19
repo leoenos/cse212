@@ -57,4 +57,15 @@ public class PriorityQueueTests
         Assert.AreEqual("Item1", priorityQueue.Dequeue());
         Assert.AreEqual("Item3", priorityQueue.Dequeue());
     }
+
+    [TestMethod]
+    // Scenario: No items in the queue.
+    // Expected Result: Error exception thrown (InvalidOperationException).
+    // Defect(s) Found: 
+    public void TestPriorityQueue_4()
+    {
+        var priorityQueue = new PriorityQueue();
+
+        Assert.ThrowsException<InvalidOperationException>(() => priorityQueue.Dequeue());
+    }
 }
